@@ -1,0 +1,91 @@
+:root {
+    --operator-background: #f69906;
+    --function-background: #9f9f9f;
+    --number-background: #313131;
+    --button-size: 69.8px;
+    --button-space: 5px;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cccccc;
+}
+
+.frame {
+    background-image: url("image/iphone.webp");
+    background-repeat: no-repeat;
+    padding: 0.1px; /* 망할 놈의 마진상쇄 해결하는 코드임 */
+    height: 100%;
+    margin-top: 50px;
+}
+
+.calculator {
+    width: min-content;
+    padding: var(--button-space);
+    padding-top: calc(var(--button-space) + 14.8px);
+    background-color: black;
+    margin: 70px 14px 0 11px;
+}
+
+.row {
+    display: flex;
+    width: min-content;
+}
+
+.display {
+    width: calc(var(--button-size) * 4 + var(--button-space) * 8);
+    height: calc(var(--button-size) + var(--button-space));
+    box-sizing: border-box;
+    padding: 0 23px;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 60px;
+}
+
+.button {
+    width: var(--button-size);
+    height: var(--button-size);
+    margin: var(--button-space);
+    border-radius: calc(var(--button-size) / 2);
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.number, .point {
+    background-color: var(--number-background);
+}
+
+.operator {
+    background-color: var(--operator-background);
+}
+
+.equal {
+    background-color: var(--operator-background);
+}
+
+.function {
+    background: var(--function-background);
+    color: black;
+}
+
+.zero {
+    width: calc(var(--button-size) * 2 + var(--button-space) * 2);
+}
