@@ -53,13 +53,13 @@ operators.forEach(el => {
     el.addEventListener("click", () => {
         if (secondNum !== "") {
             if (operator === "+") {
-                firstNum = firstNum + secondNum;
+                firstNum = String(Number(firstNum) + Number(secondNum));
             } else if (operator === "-") {
-                firstNum = firstNum - secondNum;
+                firstNum = String(Number(firstNum) - Number(secondNum));
             } else if (operator === "*") {
-                firstNum = firstNum * secondNum;
+                firstNum = String(Number(firstNum) * Number(secondNum));
             } else if (operator === "/") {
-                firstNum = firstNum / secondNum;
+                firstNum = String(Number(firstNum) / Number(secondNum));
             }
 
             display.innerText = firstNum;
@@ -121,13 +121,13 @@ equal.addEventListener("click", () => {
         let result;
 
         if (operator === "+") {
-            result = firstNum + secondNum;
+            result = Number(firstNum) + Number(secondNum);
         } else if (operator === "-") {
-            result = firstNum - secondNum;
+            result = Number(firstNum) - Number(secondNum);
         } else if (operator === "*") {
-            result = firstNum * secondNum;
+            result = Number(firstNum) * Number(secondNum);
         } else if (operator === "/") {
-            result = firstNum / secondNum;
+            result = Number(firstNum) / Number(secondNum);
         }
 
         functions[0].innerText = "AC";
